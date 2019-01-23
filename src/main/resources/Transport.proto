@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+package com.sunyard.port.client.entity;
+
+message TransportRequest {
+	required string method_signature = 1;
+	repeated string params = 2;
+	optional string bean_name = 3 [default = ""];
+}
+
+message TransportResponse {
+	optional string result = 1;
+}
